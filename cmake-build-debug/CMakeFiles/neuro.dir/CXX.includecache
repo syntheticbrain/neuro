@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adronov/git/neuro/main.cpp
+sstream
+-
+string
+-
+fstream
+-
+iostream
+-
+vector
+-
+algorithm
+-
+boost/numeric/ublas/matrix.hpp
+-
+boost/numeric/ublas/operation.hpp
+-
+
+/home/adronov/git/neuro/neuro.cpp
+neuro.h
+/home/adronov/git/neuro/neuro.h
+
+/home/adronov/git/neuro/neuro.h
+
