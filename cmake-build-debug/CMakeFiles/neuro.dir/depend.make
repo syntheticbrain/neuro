@@ -3,6 +3,6 @@
 
 CMakeFiles/neuro.dir/main.cpp.o: ../main.cpp
 
-CMakeFiles/neuro.dir/neuro.cpp.o: ../neuro.cpp
-CMakeFiles/neuro.dir/neuro.cpp.o: ../neuro.h
+CMakeFiles/neuro.dir/neuron.cpp.o: ../neuron.cpp
+CMakeFiles/neuro.dir/neuron.cpp.o: ../neuron.h
 

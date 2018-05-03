@@ -3,4 +3,4 @@ project(neuro)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(neuro main.cpp neuro.cpp neuro.h)
+add_executable(neuro main.cpp neuron.cpp neuron.h)

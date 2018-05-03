@@ -3,6 +3,6 @@
 
 CMakeFiles/neuro.dir/main.cpp.o
  /home/adronov/git/neuro/main.cpp
-CMakeFiles/neuro.dir/neuro.cpp.o
- /home/adronov/git/neuro/neuro.cpp
- /home/adronov/git/neuro/neuro.h
+CMakeFiles/neuro.dir/neuron.cpp.o
+ /home/adronov/git/neuro/neuron.cpp
+ /home/adronov/git/neuro/neuron.h

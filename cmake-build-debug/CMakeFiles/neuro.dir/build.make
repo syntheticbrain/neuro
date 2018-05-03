@@ -81,40 +81,40 @@ CMakeFiles/neuro.dir/main.cpp.o.provides: CMakeFiles/neuro.dir/main.cpp.o.requir
 CMakeFiles/neuro.dir/main.cpp.o.provides.build: CMakeFiles/neuro.dir/main.cpp.o
 
 
-CMakeFiles/neuro.dir/neuro.cpp.o: CMakeFiles/neuro.dir/flags.make
-CMakeFiles/neuro.dir/neuro.cpp.o: ../neuro.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adronov/git/neuro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/neuro.dir/neuro.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neuro.dir/neuro.cpp.o -c /home/adronov/git/neuro/neuro.cpp
+CMakeFiles/neuro.dir/neuron.cpp.o: CMakeFiles/neuro.dir/flags.make
+CMakeFiles/neuro.dir/neuron.cpp.o: ../neuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adronov/git/neuro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/neuro.dir/neuron.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/neuro.dir/neuron.cpp.o -c /home/adronov/git/neuro/neuron.cpp
 
-CMakeFiles/neuro.dir/neuro.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuro.dir/neuro.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adronov/git/neuro/neuro.cpp > CMakeFiles/neuro.dir/neuro.cpp.i
+CMakeFiles/neuro.dir/neuron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuro.dir/neuron.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adronov/git/neuro/neuron.cpp > CMakeFiles/neuro.dir/neuron.cpp.i
 
-CMakeFiles/neuro.dir/neuro.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuro.dir/neuro.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adronov/git/neuro/neuro.cpp -o CMakeFiles/neuro.dir/neuro.cpp.s
+CMakeFiles/neuro.dir/neuron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuro.dir/neuron.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adronov/git/neuro/neuron.cpp -o CMakeFiles/neuro.dir/neuron.cpp.s
 
-CMakeFiles/neuro.dir/neuro.cpp.o.requires:
+CMakeFiles/neuro.dir/neuron.cpp.o.requires:
 
-.PHONY : CMakeFiles/neuro.dir/neuro.cpp.o.requires
+.PHONY : CMakeFiles/neuro.dir/neuron.cpp.o.requires
 
-CMakeFiles/neuro.dir/neuro.cpp.o.provides: CMakeFiles/neuro.dir/neuro.cpp.o.requires
-	$(MAKE) -f CMakeFiles/neuro.dir/build.make CMakeFiles/neuro.dir/neuro.cpp.o.provides.build
-.PHONY : CMakeFiles/neuro.dir/neuro.cpp.o.provides
+CMakeFiles/neuro.dir/neuron.cpp.o.provides: CMakeFiles/neuro.dir/neuron.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neuro.dir/build.make CMakeFiles/neuro.dir/neuron.cpp.o.provides.build
+.PHONY : CMakeFiles/neuro.dir/neuron.cpp.o.provides
 
-CMakeFiles/neuro.dir/neuro.cpp.o.provides.build: CMakeFiles/neuro.dir/neuro.cpp.o
+CMakeFiles/neuro.dir/neuron.cpp.o.provides.build: CMakeFiles/neuro.dir/neuron.cpp.o
 
 
 # Object files for target neuro
 neuro_OBJECTS = \
 "CMakeFiles/neuro.dir/main.cpp.o" \
-"CMakeFiles/neuro.dir/neuro.cpp.o"
+"CMakeFiles/neuro.dir/neuron.cpp.o"
 
 # External object files for target neuro
 neuro_EXTERNAL_OBJECTS =
 
 neuro: CMakeFiles/neuro.dir/main.cpp.o
-neuro: CMakeFiles/neuro.dir/neuro.cpp.o
+neuro: CMakeFiles/neuro.dir/neuron.cpp.o
 neuro: CMakeFiles/neuro.dir/build.make
 neuro: CMakeFiles/neuro.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adronov/git/neuro/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable neuro"
@@ -126,7 +126,7 @@ CMakeFiles/neuro.dir/build: neuro
 .PHONY : CMakeFiles/neuro.dir/build
 
 CMakeFiles/neuro.dir/requires: CMakeFiles/neuro.dir/main.cpp.o.requires
-CMakeFiles/neuro.dir/requires: CMakeFiles/neuro.dir/neuro.cpp.o.requires
+CMakeFiles/neuro.dir/requires: CMakeFiles/neuro.dir/neuron.cpp.o.requires
 
 .PHONY : CMakeFiles/neuro.dir/requires
 

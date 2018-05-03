@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/adronov/git/neuro/main.cpp" "/home/adronov/git/neuro/cmake-build-debug/CMakeFiles/neuro.dir/main.cpp.o"
-  "/home/adronov/git/neuro/neuro.cpp" "/home/adronov/git/neuro/cmake-build-debug/CMakeFiles/neuro.dir/neuro.cpp.o"
+  "/home/adronov/git/neuro/neuron.cpp" "/home/adronov/git/neuro/cmake-build-debug/CMakeFiles/neuro.dir/neuron.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -47,7 +47,7 @@ void read(string filename, boost::numeric::ublas::matrix<int> &A, boost::numeric
     infile.close();
 }
 
-void printMatrix(boost::numeric::ublas::matrix<int> matrix) {
+void printMatrix(boost::numeric::ublas::matrix<float> matrix) {
     for (unsigned int i=0; i < matrix.size1(); i++) {
         for (unsigned int j=0; j < matrix.size2(); j++) {
             cout << matrix(i, j);
@@ -61,25 +61,33 @@ void printMatrix(boost::numeric::ublas::matrix<int> matrix) {
 
 int main () {
 
+    float vodka = 0.0;
+    float  rain = 1.0;
+    float bFriend = 0.0;
 
-    int n = 2;
-    boost::numeric::ublas::matrix<int> A(n,n), B(n,n);
+    boost::numeric::ublas::matrix<float> INPUTS(1,3);
 
-    A(0,0) = 2;
-    A(0,1) = 3;
-    A(1,0) = 1;
-    A(1,1) = 4;
+    boost::numeric::ublas::matrix<float> HIDDEN_LAYERS(3,2);
 
-    B(0,0) = 4;
-    B(0,1) = 2;
-    B(1,0) = 1;
-    B(1,1) = 5;
 
-    boost::numeric::ublas::prod(A, B);
 
-    boost::numeric::ublas::matrix<int> C = prod(A, B);
+    INPUTS(0,0) = vodka;
+    INPUTS(0,1) = rain;
+    INPUTS(0,2) = bFriend;
 
-    printMatrix(C);
+
+    HIDDEN_LAYERS(0,0) = 0.25;
+    HIDDEN_LAYERS(0,1) = 0.5;
+    HIDDEN_LAYERS(1,0) = 0.25;
+    HIDDEN_LAYERS(1,1) = static_cast<float>(-0.4);
+    HIDDEN_LAYERS(2,0) = 0;
+    HIDDEN_LAYERS(2,1) = 0.9;
+
+    boost::numeric::ublas::matrix<float> RESULT = prod(INPUTS, HIDDEN_LAYERS);
+
+
+
+    printMatrix(RESULT);
 
     return 0;
 }
