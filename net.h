@@ -19,7 +19,7 @@ using namespace boost::numeric::ublas;
 
 class Net {
 public:
-    Net();
+    Net(float learningRate);
 
     matrix<float> INPUTS;
     matrix<float> WEIGHTS_INPUTS;
@@ -28,6 +28,8 @@ public:
     matrix<float> HIDDEN_OUTPUT;
     matrix<float> OUTPUT;
 
+    float learningRate;
+
     void initInputs();
 
     void initWeights();
@@ -35,9 +37,6 @@ public:
     void process();
 
     float activationFunction(float x);
-
-    float sigmoid(float x);
-
 };
 
 

@@ -125,7 +125,7 @@ int main() {
 
     printMatrix(OUTPUT);*/
 
-    Net net;
+    Net net(0);
 
     printMatrix(net.OUTPUT);
 

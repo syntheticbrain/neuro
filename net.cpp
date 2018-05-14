@@ -29,13 +29,14 @@ void Net::initWeights() {
     WEIGHTS_INPUTS(2, 0) = 0.43;
     WEIGHTS_INPUTS(2, 1) = 0.29;
 
+
     WEIGHTS_OUTPUT.resize(2,1);
 
     WEIGHTS_OUTPUT(0, 0) = 0.5;
     WEIGHTS_OUTPUT(1, 0) = 0.52;
 }
 
-Net::Net() {
+Net::Net(float learningRate) : learningRate(learningRate) {
     initInputs();
     initWeights();
     process();
@@ -43,19 +44,7 @@ Net::Net() {
 
 float Net::activationFunction(float x) {
 
-    return sigmoid(x);
-}
-
-float Net::sigmoid(float x) {
-
-    float exp_value;
-    float return_value;
-
-    exp_value = exp((double) -x);
-
-    return_value = 1 / (1 + exp_value);
-
-    return return_value;
+    return 1 / (1 + exp(-x));
 }
 
 void Net::process() {
