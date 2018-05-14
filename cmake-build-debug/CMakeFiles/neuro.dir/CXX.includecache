@@ -23,14 +23,26 @@ boost/numeric/ublas/matrix.hpp
 -
 boost/numeric/ublas/operation.hpp
 -
-
-/home/adronov/git/neuro/neuron.cpp
-neuron.h
-/home/adronov/git/neuro/neuron.h
-cmath
+net.h
+/home/adronov/git/neuro/net.h
+math.h
 -
 
-/home/adronov/git/neuro/neuron.h
+/home/adronov/git/neuro/net.cpp
+net.h
+/home/adronov/git/neuro/net.h
+math.h
+-
+
+/home/adronov/git/neuro/net.h
 vector
+-
+iostream
+-
+algorithm
+-
+boost/numeric/ublas/matrix.hpp
+-
+boost/numeric/ublas/operation.hpp
 -
 

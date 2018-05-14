@@ -87,10 +87,10 @@
 		<Unit filename="/home/adronov/git/neuro/main.cpp">
 			<Option target="neuro"/>
 		</Unit>
-		<Unit filename="/home/adronov/git/neuro/neuron.cpp">
+		<Unit filename="/home/adronov/git/neuro/net.cpp">
 			<Option target="neuro"/>
 		</Unit>
-		<Unit filename="/home/adronov/git/neuro/neuron.h">
+		<Unit filename="/home/adronov/git/neuro/net.h">
 			<Option target="neuro"/>
 		</Unit>
 		<Unit filename="/home/adronov/git/neuro/CMakeLists.txt">

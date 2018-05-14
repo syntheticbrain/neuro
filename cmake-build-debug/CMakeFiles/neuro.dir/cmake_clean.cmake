@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/neuro.dir/main.cpp.o"
-  "CMakeFiles/neuro.dir/neuron.cpp.o"
+  "CMakeFiles/neuro.dir/net.cpp.o"
   "neuro.pdb"
   "neuro"
 )

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/neuro.dir/main.cpp.o CMakeFiles/neuro.dir/neuron.cpp.o  -o neuro 
+/usr/bin/c++  -g   CMakeFiles/neuro.dir/main.cpp.o CMakeFiles/neuro.dir/net.cpp.o  -o neuro 

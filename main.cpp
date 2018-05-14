@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/operation.hpp>
+#include "net.h"
+#include <math.h>
 
 using namespace std;
 
@@ -57,18 +59,28 @@ void printMatrix(boost::numeric::ublas::matrix<float> matrix) {
     }
 }
 
-int activation_function(float x) {
+float sigmoid(float x) {
 
-    if (x >= 0.5) {
-        return 1;
-    } else {
-        return 0;
-    }
+    float exp_value;
+    float return_value;
+
+    exp_value = exp((double) -x);
+
+    return_value = 1 / (1 + exp_value);
+
+    return return_value;
 }
+
+
+float activationFunction(float x) {
+
+    return sigmoid(x);
+}
+
 
 int main() {
 
-    float vodka = 0.0;
+/*    float vodka = 1.0;
     float rain = 1.0;
     float bFriend = 0.0;
 
@@ -78,44 +90,47 @@ int main() {
     INPUTS(0, 1) = rain;
     INPUTS(0, 2) = bFriend;
 
-    boost::numeric::ublas::matrix<float> WEIGHTS_INPUT_TO_HIDDEN(3, 2);
+    boost::numeric::ublas::matrix<float> WEIGHTS_INPUTS(3, 2);
 
-    WEIGHTS_INPUT_TO_HIDDEN(0, 0) = 0.25;
-    WEIGHTS_INPUT_TO_HIDDEN(0, 1) = 0.5;
-    WEIGHTS_INPUT_TO_HIDDEN(1, 0) = 0.25;
-    WEIGHTS_INPUT_TO_HIDDEN(1, 1) = -0.4;
-    WEIGHTS_INPUT_TO_HIDDEN(2, 0) = 0;
-    WEIGHTS_INPUT_TO_HIDDEN(2, 1) = 0.9;
+    WEIGHTS_INPUTS(0, 0) = 0.79;
+    WEIGHTS_INPUTS(0, 1) = 0.85;
+    WEIGHTS_INPUTS(1, 0) = 0.44;
+    WEIGHTS_INPUTS(1, 1) = 0.43;
+    WEIGHTS_INPUTS(2, 0) = 0.43;
+    WEIGHTS_INPUTS(2, 1) = 0.29;
 
-    boost::numeric::ublas::matrix<float> WEIGHTS_OUTPUT_TO_HIDDEN(1, 2);
+    boost::numeric::ublas::matrix<float> WEIGHTS_OUTPUT(2, 1);
 
+    WEIGHTS_OUTPUT(0, 0) = 0.5;
+    WEIGHTS_OUTPUT(1, 0) = 0.52;
 
-    WEIGHTS_OUTPUT_TO_HIDDEN(0, 0) = -1.0;
-    WEIGHTS_OUTPUT_TO_HIDDEN(0, 1) = 1.0;
+    boost::numeric::ublas::matrix<float> HIDDEN_INPUT = prod(INPUTS, WEIGHTS_INPUTS);
 
-    boost::numeric::ublas::matrix<float> HIDDEN_OUTPUT(2,1);
+    boost::numeric::ublas::matrix<float> HIDDEN_OUTPUT(1,2);
 
-
-    boost::numeric::ublas::matrix<float> HIDDEN_INPUT = prod(INPUTS, WEIGHTS_INPUT_TO_HIDDEN);
-
-    vector<float> hiddenOutput;
-
-/*    for (boost::numeric::ublas::matrix<float>::iterator1 it1 = HIDDEN_INPUT.begin1();
-         it1 != HIDDEN_INPUT.end1(); ++it1) {
+    for (boost::numeric::ublas::matrix<float>::iterator1 it1 = HIDDEN_INPUT.begin1(); it1 != HIDDEN_INPUT.end1(); ++it1) {
         for (boost::numeric::ublas::matrix<float>::iterator2 it2 = it1.begin(); it2 != it1.end(); ++it2) {
-
-            HIDDEN_OUTPUT(0,it2.index2()) = activation_function(*it2);
+            HIDDEN_OUTPUT(it2.index1(),it2.index2()) =  activationFunction(*it2);
         }
-        cout << endl;
     }
 
-    for(vector<float>::const_iterator it = hiddenOutput.begin(); it != hiddenOutput.end(); ++it) {
-        cout << *it;
-        cout << endl;
 
-    }*/
+    boost::numeric::ublas::matrix<float> OUTPUT = prod(HIDDEN_OUTPUT, WEIGHTS_OUTPUT);
 
-    printMatrix(HIDDEN_INPUT);
+    for (boost::numeric::ublas::matrix<float>::iterator1 it1 = OUTPUT.begin1(); it1 != OUTPUT.end1(); ++it1) {
+        for (boost::numeric::ublas::matrix<float>::iterator2 it2 = it1.begin(); it2 != it1.end(); ++it2) {
+            OUTPUT(it2.index1(),it2.index2()) =  activationFunction(*it2);
+        }
+    }
+
+    printMatrix(OUTPUT);*/
+
+    Net net;
+
+    printMatrix(net.OUTPUT);
+
+    //net.printVector(net.inputs);
+    //net.printVector(net.inputWeights);
 
     return 0;
 }
