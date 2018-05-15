@@ -37,6 +37,8 @@ public:
     void process();
 
     float activationFunction(float x);
+
+    void printMatrix(boost::numeric::ublas::matrix<float> matrix);
 };
 
 

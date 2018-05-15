@@ -3,7 +3,6 @@
 
 using namespace boost::numeric::ublas;
 
-
 void Net::initInputs() {
 
     float vodka = 1.0;
@@ -16,7 +15,6 @@ void Net::initInputs() {
     INPUTS(0, 1) = rain;
     INPUTS(0, 2) = bFriend;
 }
-
 
 void Net::initWeights() {
 
@@ -64,6 +62,17 @@ void Net::process() {
     for (matrix<float>::iterator1 it1 = OUTPUT.begin1(); it1 != OUTPUT.end1(); ++it1) {
         for (matrix<float>::iterator2 it2 = it1.begin(); it2 != it1.end(); ++it2) {
             OUTPUT(it2.index1(),it2.index2()) =  activationFunction(*it2);
+        }
+    }
+
+
+}
+
+void Net::printMatrix(matrix<float> matrix) {
+
+    for (boost::numeric::ublas::matrix<float>::iterator1 it1 = matrix.begin1(); it1 != matrix.end1(); ++it1) {
+        for (boost::numeric::ublas::matrix<float>::iterator2 it2 = it1.begin(); it2 != it1.end(); ++it2) {
+            std::cout << "(" << it2.index1() << "," << it2.index2() << ") = " << *it2 << std::endl;
         }
     }
 }

@@ -7,17 +7,7 @@
 #IncludeRegexTransform: 
 
 /home/adronov/git/neuro/main.cpp
-sstream
--
-string
--
-fstream
--
 iostream
--
-vector
--
-algorithm
 -
 boost/numeric/ublas/matrix.hpp
 -
@@ -25,8 +15,6 @@ boost/numeric/ublas/operation.hpp
 -
 net.h
 /home/adronov/git/neuro/net.h
-math.h
--
 
 /home/adronov/git/neuro/net.cpp
 net.h
