@@ -1,7 +1,3 @@
-//
-// Created by adronov on 11.05.18.
-//
-
 #ifndef NEURO_NET_H
 #define NEURO_NET_H
 
@@ -11,19 +7,15 @@
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/operation.hpp>
 
-#define ONE 1
-#define THREE 3
-
 using namespace boost::numeric::ublas;
 
 
 class Net {
-public:
-    Net(float learningRate);
+private:
 
     matrix<float> INPUTS;
-    matrix<float> WEIGHTS_INPUTS;
-    matrix<float> WEIGHTS_OUTPUT;
+    matrix<float> WEIGHTS_0_1;
+    matrix<float> WEIGHTS_1_2;
     matrix<float> HIDDEN_INPUT;
     matrix<float> HIDDEN_OUTPUT;
     matrix<float> OUTPUT;
@@ -34,12 +26,26 @@ public:
 
     void initWeights();
 
-    void process();
-
     float activationFunction(float x);
 
-    void printMatrix(boost::numeric::ublas::matrix<float> matrix);
+    void sigmoidMapper(matrix<float> &INPUT,matrix<float> &OUTPUT);
+
+    float getRandomNumber();
+
+    void fillWeights(matrix<float> &M);
+
+    matrix<float> getTempMatrix(matrix<float> &M);
+
+public:
+
+    bool predict();
+
+    void train();
+
+    Net(float learningRate);
+
+    void printMatrix(matrix<float> matrix);
 };
 
 
-#endif //NEURO_NET_H
+#endif

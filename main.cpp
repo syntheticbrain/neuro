@@ -7,9 +7,15 @@ using namespace std;
 
 int main() {
 
-    Net net(0);
+    srand(time(0));
 
-    net.printMatrix(net.OUTPUT);
+    Net net(0.1);
+
+    //net.predict();
+
+    net.train();
+
+
 
     return 0;
 }
